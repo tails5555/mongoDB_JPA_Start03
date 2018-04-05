@@ -19,11 +19,12 @@ $(function() {
 
     function setConnected(connected) {
 		$("#connect").prop("disabled", connected);
+		$("#refresh").prop("disabled", !connected);
 		$("#disconnect").prop("disabled", !connected);
 		$('#from').prop('disabled', connected);
 		$('#text').prop('disabled', !connected);
 		if (connected) {
-		    $("#conversation").show();
+		    $('#conversation').show();
 		    $('#text').focus();
 		}
 		else $("#conversation").hide();
@@ -37,10 +38,11 @@ $(function() {
     $('#from').on('blur change keyup', function(ev) {
     	$('#connect').prop('disabled', $(this).val().length == 0 );
     });
-    $('#connect,#disconnect,#text').prop('disabled', true);
+    
+    $('#connect,#disconnect,#text,#refresh').prop('disabled', true);
 
     $('#connect').click(function() {
-		client = Stomp.over(new SockJS('/example03_1/chat'));
+		client = Stomp.over(new SockJS("/example03_1/chat"));
 		client.connect({}, function (frame) {
 		    setConnected(true);
 		    client.subscribe('/topic/messages', function (message) {

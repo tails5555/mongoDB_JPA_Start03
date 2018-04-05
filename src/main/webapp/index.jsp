@@ -30,39 +30,41 @@
 			  class="btn btn-danger"
 			  type="submit"
 			  disabled="disabled">퇴장</button>
-		</form>
+			</form>
 	      </div>
+	      <br/>
+	      <p id="sessionMessage"></p>
 	    </div>
 	    <div class="row space-bottom10">
 	      <form>
-		<div class="col-md-2">
-		  <select name="topic"
-			  id="topic"
-			  class="form-control">
-		    <option>코딩이야기</option>
-		    <option>일상이야기</option>
-		    <option>여행이야기</option>
-		    <option>음악이야기</option>
-		  </select>
-		</div>
-		<div class="col-md-6">
-		  <input type="text"
-			 id="text"
-			 class="form-control"
-			 placeholder="보낼 내용을 입력하세요...">
-		</div>
-		<div class="col-md-4">
-	          <button id="send"
-			  class="btn btn-info"
-			  type="submit">보내기</button>
-			  &nbsp;&nbsp;
-			  <button id="refresh"
-			  class="btn btn-primary"
-			  type="button">새로 고침</button>
-		</div>
-		<div class="col-md-4">
-	          
-		</div>
+			<div class="col-md-2">
+			  <select name="topic"
+				  id="topic"
+				  class="form-control">
+			    <option>코딩이야기</option>
+			    <option>일상이야기</option>
+			    <option>여행이야기</option>
+			    <option>음악이야기</option>
+			  </select>
+			</div>
+			<div class="col-md-6">
+			  <input type="text"
+				 id="text"
+				 class="form-control"
+				 placeholder="보낼 내용을 입력하세요...">
+			</div>
+			<div class="col-md-4">
+		          <button id="send"
+				  class="btn btn-info"
+				  type="submit">보내기</button>
+				  &nbsp;&nbsp;
+				  <button id="refresh"
+				  class="btn btn-primary"
+				  type="button">새로 고침</button>
+			</div>
+			<div class="col-md-4">
+		          
+			</div>
 	      </form>
 	    </div>
 	    <div class="row">
