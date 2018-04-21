@@ -1,5 +1,65 @@
 # mongoDB_JPA_Start03
 Spring Data MongoDB + JSP + WebSocket(SockJS 활용) 간단한 채팅 메시징 처리 구현
-* * *
-#### 스터디 노트는 src > doc에 추가되었습니다.
-##### 스터디 노트는 언제든지 수정이 될 수 있기 때문에 이를 인지하고 있으시길 바랍니다.
+
+## Issues
+- MongoDB에서 Document 간의 관계성을 @DBRef 어노테이션을 이용해서 보장을 하는 연습을 진행합니다.
+- SockJS에 대한 기초적인 지식에 대해 공부를 진행합니다.
+- STOMP를 기반으로 실시간으로 메시지를 전송하여 데이터베이스와 연동해서 결과를 반환해 채팅 시스템을 구현하는 연습을 진행합니다.
+
+## Study Docs
+스터디 자료는 현재 프로젝트의 `src > doc` 파일에 PDF 파일로 제공을 하였습니다.
+ 
+스터디 자료는 향시에 수정이 될 수 있으니 이 점 참고하시길 바라겠습니다.
+
+[스터디 자료 참고하기](https://github.com/tails5555/mongoDB_JPA_Start03/blob/master/src/doc/MongoDB%2BSpringJPA_04_MongoDB_SockJS_%EC%A0%91%EB%AA%A9.pdf)
+
+## Maven pom.xml
+`pom.xml` 를 기반으로 Maven Dependency를 구성하여 Update Maven은 필수입니다
+
+```
+<dependencies>
+	<!-- 1. Spring Boot Starter -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-web</artifactId>
+	</dependency>
+	<!-- 2. Spring WebSocket Starter -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-websocket</artifactId>
+	</dependency>
+	<!-- 3. Spring Data MongoDB Starter -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-mongodb</artifactId>
+	</dependency>
+	<!-- 4. Tomcat Starter -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-tomcat</artifactId>
+		<scope>provided</scope>
+	</dependency>
+	<!-- 5. Spring Test Starter -->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-test</artifactId>
+		<scope>test</scope>
+	</dependency>
+	<!-- 6. Lombok Project -->
+	<!-- Lombok은 각 인스턴스들에 대해서 getter, setter, toString, equals, hashCode 등의 구현을 자동으로 해 주는 프로젝트이다. -->
+	<dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.16.20</version>
+	</dependency>
+</dependencies>
+```
+
+## Screenshot
+![example04_result01](/src/doc/example04_result01.jpg "example04_result01")
+![example04_result02](/src/doc/example04_result02.jpg "example04_result02")
+![example04_result03](/src/doc/example04_result03.jpg "example04_result03")
+![example04_result04](/src/doc/example04_result04.jpg "example04_result04")
+
+## Author
+- [강인성](https://github.com/tails5555)
