@@ -3,7 +3,7 @@ Spring Data MongoDB + JSP + WebSocket(SockJS 활용) 간단한 채팅 메시징 
 
 ## Issues
 - MongoDB에서 Document 간의 관계성을 @DBRef 어노테이션을 이용해서 보장을 하는 연습을 진행합니다.
-- SockJS에 대한 기초적인 지식에 대해 공부를 진행합니다.
+- WebSocket에 대한 개념을 SockJS를 기반으로 하여 공부를 진행합니다.
 - STOMP를 기반으로 실시간으로 메시지를 전송하여 데이터베이스와 연동해서 결과를 반환해 채팅 시스템을 구현하는 연습을 진행합니다.
 
 ## Study Docs
@@ -57,9 +57,20 @@ Spring Data MongoDB + JSP + WebSocket(SockJS 활용) 간단한 채팅 메시징 
 
 ## Screenshot
 ![example04_result01](/src/doc/example04_result01.jpg "example04_result01")
+
+작동 이후에 사용자 이름을 입력하고 난 이후에 접속하기 버튼을 클릭하면 우측과 같이 SockJS WebSocket를 통해 접속이 완료되었음을 안내합니다.
+
 ![example04_result02](/src/doc/example04_result02.jpg "example04_result02")
+
+현재 사용자와 타 사용자 끼리 채팅을 하는 장면[1]
+
 ![example04_result03](/src/doc/example04_result03.jpg "example04_result03")
+
+현재 사용자와 타 사용자 끼리 채팅을 하는 장면[2]
+
 ![example04_result04](/src/doc/example04_result04.jpg "example04_result04")
+
+현재 사용자와 타 사용자 끼리 채팅한 내용들이 MongoDB에 저장되는 장면입니다.
 
 ## Author
 - [강인성](https://github.com/tails5555)
